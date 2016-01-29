@@ -78,7 +78,7 @@ CREATE TABLE inspect_rave (                 -- Create new table for inspection
  TEFF_CAHK1_FIX           double precision,  --   Teff estimate from color in CAHK1
  TEFF_CAHK1_FIX_IND       double precision,  --   Indicator variable
  TEFF_CAHK1_FIX_UNC       double precision,  --   Error in Teff estimate from color inCAHKK1
- LOGG_ADOP                double precision,  --   Adopted log g 
+ LOGG_ADOP                double precision,  --   Adopted log g
  LOGG_ADOP_N              double precision,  --   Number of log g estimators used
  LOGG_ADOP_UNC            double precision,  --   Error in the adopted log g
  LOGG_NGS2                double precision,  --   log g estimate from NGS2
@@ -151,7 +151,7 @@ CREATE TABLE inspect_rave (                 -- Create new table for inspection
  DIST_FHB                 double precision,  --   FHB distance in kpc by Beers et al. (2000)
  L_CLASS                       varchar(80),  --   Adopted luminosity class
  DIST_AP                  double precision,  --   Distance in kpc by Allende Prieto et al. (2006)
- DIST_Z                   double precision,  --   Distance (z) from the Galactic plane 
+ DIST_Z                   double precision,  --   Distance (z) from the Galactic plane
  RV                       double precision,  --   Adopted heliocentric radial velocity
  RV_UNC                   double precision,  --   Error in the RV
  RV_CAL                   double precision,  --   Calculated heliocentric radial velocity
@@ -167,19 +167,19 @@ CREATE TABLE inspect_rave (                 -- Create new table for inspection
  GR0_HB24                 double precision,  --   g-r color prediction from HB24
  GR0_HG24                 double precision,  --   g-r color prediction from HG24
  GR0_HD24                 double precision,  --   g-r color prediction from HD24
- GR0_HP                   double precision,  --   g-r color prediction from half power point 
- GR0_UNC                  double precision,  --   Error in g-r color 
- GR0_SYN                  double precision,  --   Synthetic g-r color 
+ GR0_HP                   double precision,  --   g-r color prediction from half power point
+ GR0_UNC                  double precision,  --   Error in g-r color
+ GR0_SYN                  double precision,  --   Synthetic g-r color
  EBV                      double precision,  --   E(B-V) from Schlegel et al. (1998)
  SNR                      double precision,  --   Average S/N per pixel over 4000-8000 A
  CC_CAHK                  double precision,  --   Correlation coefficient over 3850-4250 A
  CC_MGH                   double precision,  --   Correlation coefficient over 4500-5500 A
  RA                       double precision,  --   RA in degree
- DEC                      double precision,  --   DEC in degree 
- L                        double precision,  --   Galactic longitude (l) in degree 
- B                        double precision,  --   Galactic latitude (b) in degree 
- FLAG                          varchar(80),  --   YN=obs. color used NY=predited color 
- GFLAG                         varchar(80),  --   G=strong. g=mild. n=normal 
+ DEC                      double precision,  --   DEC in degree
+ L                        double precision,  --   Galactic longitude (l) in degree
+ B                        double precision,  --   Galactic latitude (b) in degree
+ FLAG                          varchar(80),  --   YN=obs. color used NY=predited color
+ GFLAG                         varchar(80),  --   G=strong. g=mild. n=normal
  V0                       double precision,  --   V magnitude
  V0_UNC                   double precision,  --   Error in V mag
  UB0                      double precision,  --   U-B color
@@ -206,6 +206,4 @@ CREATE TABLE inspect_rave (                 -- Create new table for inspection
 
 );
 
-COPY inspect_rave FROM '/Users/vplacco/Desktop/mk_inspect/rave.insp' DELIMITERS ',' CSV;
-
-
+COPY inspect_rave FROM 'rave.insp' DELIMITERS ',' CSV;
